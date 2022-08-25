@@ -1,3 +1,4 @@
+using Core.Input;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using System;
@@ -16,10 +17,7 @@ namespace Character.Component
 
         private void Start()
         {
-            characterInput.OnPickLeft += leftHand.PickItem;
-            characterInput.OnPickRight += rightHand.PickItem;
-            characterInput.OnUseLeft += leftHand.UseItem;
-            characterInput.OnUseRight += rightHand.UseItem;
+            InitInput();
         }
 
         private void Update()
@@ -31,12 +29,21 @@ namespace Character.Component
         {
             Dispose();
         }
+
+        private void InitInput()
+        {
+            characterInput.OnPickLeft += leftHand.Pick;
+            characterInput.OnPickRight += rightHand.Pick;
+            characterInput.OnUseLeft += leftHand.Use;
+            characterInput.OnUseRight += rightHand.Use;
+        }
+
         public void Dispose()
         {
-            characterInput.OnPickLeft -= leftHand.PickItem;
-            characterInput.OnPickRight -= rightHand.PickItem;
-            characterInput.OnUseLeft -= leftHand.UseItem;
-            characterInput.OnUseRight -= rightHand.UseItem;
+            characterInput.OnPickLeft -= leftHand.Pick;
+            characterInput.OnPickRight -= rightHand.Pick;
+            characterInput.OnUseLeft -= leftHand.Use;
+            characterInput.OnUseRight -= rightHand.Use;
         }
 
     }

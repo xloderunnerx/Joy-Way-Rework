@@ -12,14 +12,7 @@ namespace Character.Component
         public event Action OnPickRight;
         public event Action OnUseLeft;
         public event Action OnUseRight;
-        private float horizontal;
-        private float vertical;
-        private float mouseX;
-        private float mouseY;
-        public float Horizontal { get => horizontal; private set => horizontal = value; }
-        public float Vertical { get => vertical; private set => vertical = value; }
-        public float MouseX { get => mouseX; private set => mouseX = value; }
-        public float MouseY { get => mouseY; private set => mouseY = value; }
+        
 
         private void Update()
         {

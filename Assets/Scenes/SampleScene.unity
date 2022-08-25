@@ -257,6 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 334659929}
+  - component: {fileID: 334659930}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -278,6 +279,27 @@ Transform:
   m_Father: {fileID: 1800131862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &334659930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334659928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99463ffd77b7d94a8a194493c650dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &347815444
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +464,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 530590782}
-  - component: {fileID: 530590783}
   m_Layer: 0
   m_Name: FireBall-2
   m_TagString: Untagged
@@ -465,38 +486,6 @@ Transform:
   m_Father: {fileID: 1463485538}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &530590783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530590781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 541430077}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 541430077}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &541430077
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 934188268}
+  - component: {fileID: 934188269}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -953,6 +943,27 @@ Transform:
   m_Father: {fileID: 1800131862}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934188269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934188267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99463ffd77b7d94a8a194493c650dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,12 +1250,20 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 934188269}
+    - {fileID: 334659930}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: leftHand
+      Entry: 10
+      Data: 0
+    - Name: rightHand
+      Entry: 10
+      Data: 1
 --- !u!1 &1047472552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,29 +1336,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081088568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
+  m_Script: {fileID: 11500000, guid: aff37f2aeeeb163409396fb4e40f9ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 1811359840}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 1811359840}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &1089505859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +1797,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356953565}
-  - component: {fileID: 1356953566}
   m_Layer: 0
   m_Name: WaterBall-1
   m_TagString: Untagged
@@ -1821,38 +1819,6 @@ Transform:
   m_Father: {fileID: 1463485538}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1356953566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356953564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 396230899}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 396230899}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &1364022544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +1959,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1630349010}
-  - component: {fileID: 1630349011}
   m_Layer: 0
   m_Name: WaterBall-2
   m_TagString: Untagged
@@ -2016,38 +1981,6 @@ Transform:
   m_Father: {fileID: 1463485538}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1630349011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630349009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 210918377}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 210918377}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &1643482529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,7 +1990,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643482530}
-  - component: {fileID: 1643482531}
   m_Layer: 0
   m_Name: FireBall-1
   m_TagString: Untagged
@@ -2080,38 +2012,6 @@ Transform:
   m_Father: {fileID: 1463485538}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643482531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643482529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 409062885}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 409062885}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &1696018915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,29 +2342,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854856299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49fbc87b889cc044b096ee97e3bc6ce, type: 3}
+  m_Script: {fileID: 11500000, guid: aff37f2aeeeb163409396fb4e40f9ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: []
-    ReferencedUnityObjects:
-    - {fileID: 2085812714}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: baseWeaponSettings
-      Entry: 6
-      Data: 
-    - Name: shootingPoint
-      Entry: 10
-      Data: 0
-  baseWeaponSettings: {fileID: 0}
-  shootingPoint: {fileID: 2085812714}
-  floatingPosition: {x: 0, y: 0, z: 0}
-  baseHand: {fileID: 0}
 --- !u!1 &1868013330
 GameObject:
   m_ObjectHideFlags: 0
